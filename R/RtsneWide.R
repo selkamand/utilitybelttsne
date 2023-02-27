@@ -36,7 +36,7 @@ tsne_wide <- function(data, id_col = NULL, perplexity = 30, remove_non_numeric_c
   else{
     assertive::assert_is_a_non_empty_string(id_col)
     assertive::assert_all_are_true(id_col %in% colnames(data))
-    assertive::assert_has_no_duplicates(data[[id_col]])
+    assertive::assert_no_duplicates(data[[id_col]])
 
     id_vals = as.character(df[[id_col]])
     #rownames(df) <- df[[id_col]]
